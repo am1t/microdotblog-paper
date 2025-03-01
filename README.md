@@ -1,13 +1,4 @@
 <div align="center">
-
-Link in bio to **widgets**,
-your online **home screen**. ➫ [kee.so](https://kee.so/)
-
-</div>
-
----
-
-<div align="center">
 <h1>Paper <sup><sup><sub>6.29</sub></sup></sup> for Micro.blog</h1>
 
 A simple, clean, flexible Hugo theme. Ported to and customized for [Micro.blog](https://micro.blog). [Demo here](https://mb.amitgawande.com).
