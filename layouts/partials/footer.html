@@ -4,10 +4,10 @@
   <div class="mr-auto">
     {{- if site.Copyright -}} {{- site.Copyright -}} {{- else -}} &copy; {{-
     now.Year -}}
-    <a class="link" href="{{- `` | absURL -}}">{{ or site.Author.name site.Title }}</a>
+    <a class="link" href="{{- `` | absURL -}}"> {{ or site.Author.name site.Title }}</a>
     {{- end -}}
   </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+  <a class="link" href="https://gohugo.io/" rel="noopener" target="_blank"
     >powered by hugo️️</a
   >️
   <a
@@ -15,6 +15,6 @@
     href="https://micro.blog/"
     rel="noopener"
     target="_blank"
-    >& Micro.blog</a
+    > & Micro.blog</a
   >
 </footer>
