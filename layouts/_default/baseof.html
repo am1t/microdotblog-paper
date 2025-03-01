@@ -16,7 +16,10 @@
 "threads" "bluesky" "buymeacoffee" "microdotblog" "rss" -}}<!---->
 {{- range $social_params -}}<!---->
 {{- if isset site.Params . -}}<!---->
-{{- $.Scratch.Add "social_list" (slice .) -}}<!---->
+  {{ $val := index site.Params . }}  <!-- Fetch the value -->
+  {{ if or (eq $val true) (and (ne $val false) (ne $val "")) }}
+    {{- $.Scratch.Add "social_list" (slice .) -}}<!---->
+  {{ end }}
 {{- end -}}<!---->
 {{- end -}}<!---->
 
