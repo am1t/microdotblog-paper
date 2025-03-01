@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+    {{ if not .Site.Params.hide_categories_on_archive }}
+        {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+            <div class="archive-categories">
+                <a class="archive-category-name" href="{{ "/categories/" | relURL }}{{ $name | urlize }}"> {{ $name }}</a>
+            </div>
+        {{ end }}
+    {{ end }}
+	
+	{{ $list := (where .Site.Pages "Type" "post") }}
+	{{ range $list }}
+
+		<p class="archive-entry">
+			<a href="{{ .Permalink }}" class="u-url"><span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</span></a>:
+			<span class="p-name"><b>{{ .Title }}</b></span> 
+			<span class="p-summary">{{ .Summary | truncate 100 }}</span>
+		</p>
+
+	{{ end }}
+
+{{ end }}

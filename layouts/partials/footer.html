@@ -4,7 +4,7 @@
   <div class="mr-auto">
     {{- if site.Copyright -}} {{- site.Copyright -}} {{- else -}} &copy; {{-
     now.Year -}}
-    <a class="link" href="{{- `` | absURL -}}">{{- site.Title -}}</a>
+    <a class="link" href="{{- `` | absURL -}}">{{ or site.Author.name site.Title }}</a>
     {{- end -}}
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
@@ -12,9 +12,9 @@
   >️
   <a
     class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
+    href="https://micro.blog/"
     rel="noopener"
     target="_blank"
-    >hugo-paper</a
+    >& Micro.blog</a
   >
 </footer>

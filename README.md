@@ -8,125 +8,70 @@ your online **home screen**. ➫ [kee.so](https://kee.so/)
 ---
 
 <div align="center">
-<h1>Paper <sup><sup><sub>6.29</sub></sup></sup></h1>
+<h1>Paper <sup><sup><sub>6.29</sub></sup></sup> for Micro.blog</h1>
 
-Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
-
-A simple, clean, customizable Hugo theme.
+A simple, clean, flexible Hugo theme. Ported to and customized for [Micro.blog](https://micro.blog). [Demo here](https://mb.amitgawande.com).
 
 ⚡️ Fast | 👒 Customizable | 🫙 Smooth
 
 </div>
-
-## Links
-
-Product Hunt: [producthunt.com/posts/hugo-paper-6](https://www.producthunt.com/posts/hugo-paper-6)
-
-Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
-
 ## Overview
 
-![](./images/screenshot.png)
-![](./images/screenshot_dark.png)
-![](./images/pagespeed.png)
+![](https://raw.githubusercontent.com/am1t/microdotblog-paper/master/images/screenshot.png)
+![](https://raw.githubusercontent.com/am1t/microdotblog-paper/master/images/screenshot_dark.png)
+![](https://raw.githubusercontent.com/am1t/microdotblog-paper/master/images/screenshot_mobile.png)
 
-## Options
+## Installing the theme
 
-Available options to `config.toml` or `hugo.toml`:
+Paper is [available in Micro.blog's Plug-ins directory](https://micro.blog/account/plugins/view/43) and can directly be installed from there. Note that **the theme is compatible with Hugo 0.91** which is available as a setting on Micro.blog. You can follow the below general steps to install the theme. 
 
-```toml
-[services]
-  [services.disqus]
-    shortname = 'YOUR_DISQUS_SHORTNAME'     # use disqus comments
+- Uninstall any theme that you have installed as a plugin. 
+- Set you current theme to blank and Hugo Version to 0.91 in the design section of your blog. 
+- Make sure there are no other conflicting custom CSS configured for the previous theme. 
+- Install the "[Paper theme](https://micro.blog/account/plugins/view/43)" plug-in from the directory. 
+- Once the theme is successfully installed, you can configure the social icons displayed in the header by modifying the available options as plug-in's settings.
+- Additionally, you can also configure parameter to display full post content on homepage or not to display categories on archive page.
 
-[params]
-  # color style
-  color = 'linen'                           # linen, wheat, gray, light
+### Change Log
 
-  # header social icons
-  twitter = 'YOUR_TWITTER_ID'               # twitter.com/YOUR_TWITTER_ID
-  github = 'YOUR_GITHUB_ID'                 # github.com/YOUR_GITHUB_ID
-  instagram = 'YOUR_INSTAGRAM_ID'           # instagram.com/YOUR_INSTAGRAM_ID
-  linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
-  mastodon = 'YOUR_MASTODON_LINK'           # e.g. 'https://mastodon.instance/@xxx'
-  threads = '@YOUR_THREADS_ID'              # threads.net/@YOUR_THREADS_ID
-  bluesky = 'YOUR_BLUESKY_ID'               # https://bsky.app/profile/YOUR_BLUESKY_ID
-  rss = true                                # show rss icon
+**Version 2.0:** Released 2nd March, 2025
+- Major version synced with latest upstream theme
+- More social icons
 
-  # home page profile
-  avatar = 'GRAVATAR_EMAIL'                 # gravatar email or image url
-  name = 'YOUR_NAME'
-  bio = 'YOUR_BIO'
+**Version 1.1.6:** Released 22th November, 2022
+- Added support for mastodon and linkedin social icons, as `rel="me"` links.
 
+**Version 1.1.3:** Released 23rd May, 2022
+- Fixed issue with On This Day feature not working
+- Minor fix for subscribe form 
+- Minor fixes for archive page
 
-  # misc
-  disableHLJS = true                        # disable highlight.js
-  disablePostNavigation = true              # disable post navigation
-  monoDarkIcon = true                       # show monochrome dark mode icon
-  gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
-  math = true                               # enable KaTeX math typesetting globally
-  localKatex = false                        # use local KaTeX js/css instead of CDN
-  graphCommentId = "YOUR_GRAPH_COMMENT_ID"  # use graph comment (disqus alternative)
-  favicon = "favicon.ico"                   # customize the default favicon
-  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
+**Version 1.1:** Released 29th April, 2022
+- Added configuration to display full post content on homepage
+- Minor styling fixes for menu and post summary
 
-  # RTL supprot
-  direction = "rtl"                         # RTL support for Right-to-left languages
+**Version 1.0.4:** Released 10th February, 2022
+- Modified Archive Page template location [as per Micro.blog](https://micro.blog/manton/12448449) 
+- Fixed issue with plugin CSS and files not picked up
+- Fixed issue [with Custom CSS not working](https://micro.blog/Mtt/12470314)
 
-  # giscus
-[params.giscus]
-  repo = 'YOUR_GISCUS_REPO'                 # see https://giscus.app for more details
-  repoId = 'YOUR_GISCUS_REPO_ID'
-  category = 'YOUR__GISCUS_CATEGORY'
-  categoryId = 'YOUR_GISCUS_CATEGORY_ID'
-  mapping = 'pathname'
-  theme = 'light'
-  lang = 'zh-CN'
-```
+**Version 1.0.3:** Released 1st February, 2022
+- Added support to include categories on archive page
+- Added support for Reply by email and Conversations on M.b plugins
+- Added Buy Me a Coffee to social list 
+- Fixed issue with redirect pages in menu
 
-Available options to front matter:
+**Version 1.0.2:** Released 24th January, 2022
+- Added support to include replies on individual posts
+- Added the configuration of social icons as plug-in setting
+- Updated the styling to display categories along with posts
+- Updated documentation to include installation steps
+- Fixed styling of images on smaller screens
 
-```toml
-comments = false                            # disable comments for a specific page
-math = true                                 # enable KaTeX math typesetting for a specific page
-```
-
-## Install
-
-### As git submodule
-
-Inside the folder of your Hugo project, run:
-
-```bash
-git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
-```
-
-Open `config.toml`(or `hugo.toml`), change `theme` to `"paper"`:
-
-```toml
-theme = "paper"
-```
-
-For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#configure-the-site) of Hugo.
-
-### As hugo module
-
-Add paper theme ad dependency of your site:
-
-```bash
-hugo mod init github.com/<your_user>/<your_project>
-```
-
-Open `config.toml`(or `hugo.toml`), remove the `theme` line (if present), add `module` section to the bottom of the file:
-
-```toml
-[module]
-  [[module.imports]]
-    path = "github.com/nanxiaobei/hugo-paper"
-```
-
-For more information, please read the [official guide](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme) of Hugo.
+**Version 1.0:** Released 23rd January, 2022
+- First version with a sperate Stats page
+- Includes stats summary and posts stats grouped by year and category
 
 ## License
 
-[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/main/LICENSE) (c) [nanxiaobei](https://lee.so/)
+[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/master/LICENSE)

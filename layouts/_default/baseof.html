@@ -13,7 +13,7 @@
 
 <!-- social_list -->
 {{- $social_params := slice "twitter" "github" "instagram" "linkedin" "mastodon"
-"threads" "bluesky" "rss" -}}<!---->
+"threads" "bluesky" "rss" "buymeacoffee" "microdotblog" -}}<!---->
 {{- range $social_params -}}<!---->
 {{- if isset site.Params . -}}<!---->
 {{- $.Scratch.Add "social_list" (slice .) -}}<!---->
@@ -50,5 +50,10 @@
     </main>
 
     {{- partial "footer.html" . -}}
+    {{ partial "custom_footer.html" . }}
+
+    {{ range .Site.Params.plugins_js }}
+      <script src="{{ . }}"></script>
+    {{ end }}
   </body>
 </html>

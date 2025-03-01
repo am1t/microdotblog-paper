@@ -36,6 +36,7 @@
   <!---->
   {{- $css := slice $main $custom | resources.Concat "main.css" | minify -}}
   <link rel="preload stylesheet" as="style" href="{{- $css.Permalink -}}" />
+  <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
   <!-- dark icon -->
   {{- $dark_icon := "theme.png" -}}
@@ -76,14 +77,9 @@
   <!---->
 
   <!-- favicon -->
-  <link
-    rel="icon"
-    href="{{- site.Params.favicon | default `favicon.ico` | absURL -}}"
-  />
-  <link
-    rel="apple-touch-icon"
-    href="{{- site.Params.appleTouchIcon | default `apple-touch-icon.png` | absURL -}}"
-  />
+  {{ $defaultPath := printf "/favicon.png" | printf "%s%s" $.Site.Author.username | printf "https://micro.blog/%s" | printf "%s" }}
+  <link rel="shortcut icon" href="{{ .Site.Params.favicon | default $defaultPath }}" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="{{ .Site.Params.favicon | default $defaultPath }}" type="image/x-icon" />
 
   <!-- generator -->
   {{- hugo.Generator -}}
@@ -112,4 +108,5 @@
   <link rel="canonical" href="{{- .Permalink -}}" />
   {{- end -}}
   <!---->
+  {{ partial "microblog_head.html" . }}
 </head>
