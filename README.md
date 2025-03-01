@@ -36,7 +36,8 @@ Paper is [available in Micro.blog's Plug-ins directory](https://micro.blog/accou
 
 **Version 2.0:** Released 2nd March, 2025
 - Major version synced with latest upstream theme
-- More social icons
+- Support for more social icons, including Bluesky
+- Custom theme color setting
 
 **Version 1.1.6:** Released 22th November, 2022
 - Added support for mastodon and linkedin social icons, as `rel="me"` links.

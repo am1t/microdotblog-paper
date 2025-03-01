@@ -1,5 +1,5 @@
 {
-	"version": "1.1.6",
+	"version": "2.0.0",
 	"title": "Paper theme",
 	"description": "A simple, clean, flexible Hugo theme, customized for Micro.blog.",
 	"fields": [
@@ -34,11 +34,6 @@
 			"placeholder": "Your LinkedIn username"
 		},
 		{
-			"field": "params.buymeacoffee",
-			"label": "Buy Me a Coffee",
-			"placeholder": "Your Buy Me a Coffee username"
-		},
-		{
 			"field": "params.threads",
 			"label": "Threads",
 			"placeholder": "Your Threads Id"
@@ -61,11 +56,6 @@
 		{
 			"field": "params.hide_categories_on_archive",
 			"label": "Hide category list on Archive page",
-			"type": "boolean"
-		},
-		{
-			"field": "params.full_content_on_homepage",
-			"label": "Display full post content on Homepage",
 			"type": "boolean"
 		},
 		{
